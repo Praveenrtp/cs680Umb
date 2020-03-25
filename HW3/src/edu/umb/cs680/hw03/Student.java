@@ -78,6 +78,6 @@ public class Student {
 				+ outStudent.getI20());
 		System.out.println("Student state is: "
 				+ outStudent.getState());
-		System.out.println("Student class has been implemented succsfully");
+		System.out.println("Student class has been implemented successfully");
 	}
 }
