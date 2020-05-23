@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class MulticastTest {
 	PieChartObserver piechartObserver = new PieChartObserver();
 	TableObserver tableObserver = new TableObserver();
-	TableObserver threeDObserver = new TableObserver();
+	ThreeDObserver THREEDObserver = new ThreeDObserver();
 	StockQuoteObservable stockMulticast = new StockQuoteObservable();
 	DJIAQuoteObservable djiaMulticast = new DJIAQuoteObservable();
 
@@ -14,7 +14,7 @@ class MulticastTest {
 
 		djiaMulticast.addObserver(piechartObserver);
 		djiaMulticast.addObserver(tableObserver);
-		djiaMulticast.addObserver(threeDObserver);
+		djiaMulticast.addObserver(THREEDObserver);
 		djiaMulticast.changeQuote(100);
 		djiaMulticast.changeQuote(200);
 		
@@ -25,7 +25,7 @@ class MulticastTest {
 		
 		stockMulticast.addObserver(piechartObserver);
 		stockMulticast.addObserver(tableObserver);
-		stockMulticast.addObserver(threeDObserver);
+		stockMulticast.addObserver(THREEDObserver);
 		stockMulticast.changeQuote("rtp", 10);
 		stockMulticast.changeQuote("rtp1", 27);
 	
